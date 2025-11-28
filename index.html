@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Art of Tea Making</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #e8dfd0;
+}
+
+#container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #e8dfd0;
+}
+
+nav {
+  text-align: center;
+  padding: 40px 0 30px 0;
+  border-bottom: 1px solid #d4c5b0;
+}
+
+nav a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #5a4a3a;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 25px;
+}
+
+nav a:hover {
+  color: #3a3a3a;
+}
+
+#hero {
+  text-align: center;
+  padding: 100px 150px 80px 150px;
+}
+
+#hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 96px;
+  font-weight: 300;
+  color: #3a3a3a;
+  letter-spacing: 15px;
+  margin: 0 0 50px 0;
+  line-height: 1.1;
+}
+
+#hero-subtitle {
+  font-size: 18px;
+  color: #7a6a5a;
+  line-height: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#hero-image {
+  width: 100%;
+  max-width: 958px;
+  height: auto;
+  margin: 80px auto 0 auto;
+  display: block;
+}
+
+#journey-section {
+  padding: 80px 120px;
+}
+
+#journey-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #3a3a3a;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 0 0 60px 0;
+}
+
+#journey-image {
+  width: 100%;
+  max-width: 958px;
+  height: auto;
+  margin: 50px auto;
+  display: block;
+}
+
+.quote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-style: italic;
+  color: #7a6a5a;
+  text-align: center;
+  margin: 60px 0;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.body-text {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.two-column {
+  width: 100%;
+  margin: 80px 0;
+}
+
+.two-column::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-left {
+  width: 50%;
+  float: left;
+}
+
+.col-right {
+  width: 50%;
+  float: right;
+}
+
+.side-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.side-text {
+  padding: 60px;
+  background: #f5f0e8;
+  height: 600px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.side-text h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  color: #3a3a3a;
+  margin: 0 0 30px 0;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.side-text p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.side-text ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.side-text ul li {
+  font-size: 16px;
+  color: #5a4a3a;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.8;
+}
+
+.side-text ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #c9b896;
+  font-size: 24px;
+}
+
+.full-width-section {
+  background: #f5f0e8;
+  padding: 100px 250px;
+  margin: 80px 0;
+}
+
+.full-width-section h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  text-align: center;
+  color: #3a3a3a;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: 0 0 50px 0;
+}
+
+.ayurveda-image {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.grid-item h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.grid-item p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+}
+
+.pyramid-section {
+  padding: 80px 250px;
+}
+
+.pyramid-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #3a3a3a;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 0 0 30px 0;
+}
+
+.pyramid-subtitle {
+  text-align: center;
+  font-size: 20px;
+  color: #5a4a3a;
+  margin-bottom: 60px;
+  font-style: italic;
+}
+
+.perfume-image {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.pyramid-layer {
+  background: #fff;
+  padding: 50px 60px;
+  margin-bottom: 30px;
+  border-left: 6px solid #c9b896;
+}
+
+.pyramid-layer h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: #3a3a3a;
+  margin-bottom: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.pyramid-layer p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.pyramid-layer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pyramid-layer ul li {
+  font-size: 16px;
+  color: #5a4a3a;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.8;
+}
+
+.pyramid-layer ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #c9b896;
+  font-size: 20px;
+}
+
+.basics-section {
+  padding: 80px 200px;
+}
+
+.basics-header-image {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.basics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin: 60px 0;
+  background: #f5f0e8;
+  padding: 80px 60px;
+}
+
+.basics-card h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #3a3a3a;
+}
+
+.basics-card p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+
+.equipment-section {
+  padding: 80px 200px;
+}
+
+.equipment-hero-image {
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  margin: 40px auto 60px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.equipment-item {
+  text-align: center;
+}
+
+.equipment-item-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.equipment-item h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.equipment-item p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+}
+
+.process-section {
+  background: #f5f0e8;
+  padding: 80px 250px;
+  margin-top: 60px;
+}
+
+.process-section h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #3a3a3a;
+  letter-spacing: 3px;
+}
+
+.process-section ol {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #5a4a3a;
+  line-height: 2.5;
+  padding-left: 25px;
+}
+
+.process-quote {
+  text-align: center;
+  font-style: italic;
+  margin-top: 40px;
+  color: #7a6a5a;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 80px 0 60px 0;
+  border-top: 1px solid #d4c5b0;
+  margin-top: 80px;
+}
+
+footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  color: #7a6a5a;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#wisdom">Ancient Wisdom</a>
+  <a href="#blending">Blending Philosophy</a>
+  <a href="#basics">Tea Basics</a>
+  <a href="#equipment">Equipment</a>
+</nav>
+
+<section id="home">
+  <div id="hero">
+    <h1>THE ART<br>OF<br>TEA MAKING</h1>
+    <p id="hero-subtitle">Tea has been enjoyed for thousands of years in many cultures around the world. Different herbs and spices come from various regions and have been used for their flavors and health benefits.</p>
+  </div>
+  
+
+  <img id="hero-image" src="pexels-osmachko-230477.jpg" alt="Tea ceremony">
+  
+  <div id="journey-section">
+    <h2>THE JOURNEY</h2>
+    
+   
+    <img id="journey-image" src="download.jpg" alt="Tea preparation">
+    
+    <p class="quote">"Steam curled from my mug, and just like that, I was back home."</p>
+    
+    <p class="body-text">I've loved making tea since I was a kid. But when I hit middle school, I slowly drifted toward coffee, and tea got left behind for a while. It wasn't until university that chai made its way back into my daily life. Sharing a cup with my mom and dad reminded me of home and comfort, two things I didn't realize I was missing until I had a cup again.</p>
+    
+    <p class="body-text">After moving away, I started craving those cozy chai moments, not just the tea, but the way it helped me feel connected. When I wanted to bond with my new roommate, I brewed her a cup of chamomile to help with her sleep. She wasn't really a tea person, but she liked my blend, and we ended up talking late into the night.</p>
+    
+    <p class="body-text">That summer, I started blending my own teas, mostly for digestion and just feeling better in general. My mom and dad especially loved the fennel tea I made. It became a little ritual in itself. Playing with herbs and flavors, researching, something just for me, comforting, creative, and grounding all at once.</p>
+    
+    <p class="quote">consider this your official nudge to romanticize your tea habits.</p>
+  </div>
+</section>
+
+<section id="wisdom">
+  <div id="journey-section">
+    <h2>ANCIENT WISDOM</h2>
+  </div>
+  
+  
+  <div class="two-column">
+    <div class="col-left">
+      
+      <img class="side-image" src="image (2).png"
+           alt="TCM tea">
+    </div>
+    <div class="col-right">
+      <div class="side-text">
+        <h3>Traditional Chinese Medicine</h3>
+        <p>Traditional Chinese Medicine (TCM) works by restoring balance in the body, focusing on overall wellness rather than just treating symptoms. At its core, TCM believes good health depends on the balance of Qi (vital energy), Yin-Yang, and the Five Elements.</p>
+        <ul>
+          <li><strong>Hot vs Cold Energy:</strong> If your body has too much yin or yang, it can drain your qi and create health problems.</li>
+          <li><strong>Prevention Over Cure:</strong> Chinese medicine is restorative and promotes balance to break cycles of stress.</li>
+          <li><strong>Common TCM Tea Principles:</strong> Ginger for warming, Green Tea for cooling, Chrysanthemum for clearing heat.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="two-column">
+    <div class="col-left">
+      <div class="side-text">
+        <h3>Wabi-Sabi</h3>
+        <p>Wabi-sabi is a Japanese philosophy centered on the acceptance of transience and appreciation of beauty in imperfection. Developed out of the aesthetic philosophy of cha-no-yu (the tea ceremony) in fifteenth-century Japan.</p>
+        <p><strong>Your tea doesn't need to be perfect.</strong> The chipped cup, the slightly burnt kettle, the herbs that didn't measure exactly right - these "imperfections" add character and authenticity to your practice.</p>
+        <p>The ceremony is an elegant and mindful practice that cherishes simplicity, naturalness, and the beauty of imperfection.</p>
+      </div>
+    </div>
+    <div class="col-right">
+      <img class="side-image" src="Boire du thé style wabi sabi _ Photo Premium.jpg
+" alt="Wabi-sabi tea aesthetic">
+    </div>
+  </div>
+  
+  
+  <div class="full-width-section">
+    <h3>Ayurveda</h3>
+    
+    
+    <img class="ayurveda-image" src="your-image-4-here.jpg" alt="Ayurvedic spices">
+    
+    <p style="text-align: center; font-size: 18px; line-height: 2; max-width: 800px; margin: 0 auto 40px auto; color: #5a4a3a;">Ayurveda is India's traditional, natural system of medicine that has been practiced for more than 5,000 years. A Sanskrit word, Ayurveda translates as "science of life" or "practices of longevity."</p>
+    
+    <div class="three-column">
+      <div class="grid-item">
+        <h4>Vata</h4>
+        <p><strong>Air + Space</strong><br>Qualities: Dry, cold, light, mobile<br><br>Tea needs: Warming spices like cinnamon and ginger</p>
+      </div>
+      <div class="grid-item">
+        <h4>Pitta</h4>
+        <p><strong>Fire + Water</strong><br>Qualities: Hot, oily, sharp, intense<br><br>Tea needs: Cooling herbs like peppermint and licorice</p>
+      </div>
+      <div class="grid-item">
+        <h4>Kapha</h4>
+        <p><strong>Earth + Water</strong><br>Qualities: Heavy, slow, cool, oily<br><br>Tea needs: Energizing herbs like anise and bay leaf</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================= -->
+<!-- END PAGE 2: ANCIENT WISDOM               -->
+<!-- ========================================= -->
+
+<!-- ========================================= -->
+<!-- PAGE 3: BLENDING PHILOSOPHY              -->
+<!-- ========================================= -->
+<section id="blending">
+  <div class="pyramid-section">
+    <h2>FROM PERFUME<br>TO TEACUP</h2>
+    <p class="pyramid-subtitle">My Three-Layer Blending Philosophy</p>
+    
+    <!-- REPLACE WITH IMAGE 3: Perfume and blending station -->
+    <img class="perfume-image" src="your-image-3-here.jpg" alt="Blending station">
+    
+    <p class="body-text">When I first started creating my own tea blends, I found myself overwhelmed by endless possibilities. The breakthrough came when I was looking for perfume. Catching a whiff of a complex, layered fragrance, it suddenly clicked. Tea blending follows the same principles as perfume making.</p>
+    
+    <div class="pyramid-layer">
+      <h4>Base Notes: The Foundation</h4>
+      <p>Just like base notes are the foundation of fragrance, the health benefits form the foundation of my tea blends. These are the deeply therapeutic herbs that do the real work. The chamomile for sleep, the ginger for digestion, the tulsi for stress relief.</p>
+      <ul>
+        <li>The largest portion of the blend (40-60%)</li>
+        <li>The reason you're drinking the tea</li>
+        <li>The herbs with the most research behind them</li>
+        <li>Often milder in taste but powerful in effect</li>
+      </ul>
+    </div>
+    
+    <div class="pyramid-layer">
+      <h4>Middle Notes: The Character</h4>
+      <p>In tea, these are the flavors that make you want to keep sipping—the warming spices, the floral hints, the earthy undertones that give personality to your blend.</p>
+      <ul>
+        <li>The character of your tea (20-40%)</li>
+        <li>What makes each blend unique and memorable</li>
+        <li>The bridge between therapeutic and delicious</li>
+        <li>The flavors that linger pleasantly on your palate</li>
+      </ul>
+    </div>
+    
+    <div class="pyramid-layer">
+      <h4>Top Notes: The Harmony</h4>
+      <p>These are the accent herbs that tie everything together. The pop of citrus peel, the warming touch of cardamom, the subtle complexity that makes you pause and think, "What is that lovely note?"</p>
+      <ul>
+        <li>The finishing touches (10-20%)</li>
+        <li>Often the most fragrant or intense flavors</li>
+        <li>Used sparingly but with big impact</li>
+        <li>The elements that create harmony between base and middle</li>
+      </ul>
+    </div>
+    
+    <p class="quote">"Once I started thinking like a perfumer, every cup became a carefully composed symphony of health, taste, and harmony."</p>
+  </div>
+</section>
+<!-- ========================================= -->
+<!-- END PAGE 3: BLENDING PHILOSOPHY          -->
+<!-- ========================================= -->
+
+<!-- ========================================= -->
+<!-- PAGE 4: TEA BASICS                       -->
+<!-- ========================================= -->
+<section id="basics">
+  <div class="basics-section">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 300; text-align: center; letter-spacing: 8px; margin-bottom: 30px; color: #3a3a3a;">TEA CRAFT BASICS</h2>
+    <p style="text-align: center; font-size: 18px; margin-bottom: 40px; color: #5a4a3a;">Understand Your Base Tools and Methods</p>
+    
+    <!-- REPLACE WITH IMAGE 1: Four cups of tea -->
+    <img class="basics-header-image" src="your-image-1-here.jpg" alt="Different types of tea">
+    
+    <div class="basics-grid">
+      <div class="basics-card">
+        <h4>True Teas vs Tisanes</h4>
+        <p>True teas come from the Camellia sinensis plant. These include black, green, oolong, and white tea. They all contain caffeine.</p>
+        <p>Tisanes are herbal teas like chamomile, mint, and rooibos. These are naturally caffeine-free.</p>
+      </div>
+      
+      <div class="basics-card">
+        <h4>Water Temperature</h4>
+        <p>Green tea is best brewed with water between 160 and 180°F. Don't let it boil.</p>
+        <p>Black tea prefers hotter water, around 200 to 212°F.</p>
+        <p>Herbal teas do well with water between 205 and 212°F.</p>
+      </div>
+      
+      <div class="basics-card">
+        <h4>Steeping Time</h4>
+        <p>Steep herbal teas for 5 to 10 minutes.</p>
+        <p>Steep true teas for 2 to 5 minutes.</p>
+        <p>Longer steeping extracts more flavor and beneficial compounds, but can also increase bitterness in true teas.</p>
+      </div>
+      
+      <div class="basics-card">
+        <h4>Storage</h4>
+        <p>Keep your blends in airtight containers. Glass jars, tins, or paper bags with a seal work well.</p>
+        <p>Store them in a cool, dry place away from sunlight.</p>
+        <p>Label your blends with the name and date. This keeps the flavor fresh and helps you remember what's inside.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================= -->
+<!-- END PAGE 4: TEA BASICS                   -->
+<!-- ========================================= -->
+
+<!-- ========================================= -->
+<!-- PAGE 5: EQUIPMENT                        -->
+<!-- ========================================= -->
+<section id="equipment">
+  <div class="equipment-section">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 300; text-align: center; letter-spacing: 8px; margin-bottom: 30px; color: #3a3a3a;">ESSENTIAL<br>EQUIPMENT</h2>
+    <p style="text-align: center; font-size: 18px; max-width: 700px; margin: 0 auto 40px auto; line-height: 2; color: #5a4a3a;">You don't need fancy gadgets to make beautiful tea. Like wabi-sabi teaches us, less is more. After years of blending, my entire setup fits on a small kitchen counter and costs under $20.</p>
+    
+    <!-- REPLACE WITH IMAGE 2: Flat lay of different tea types -->
+    <img class="equipment-hero-image" src="your-image-2-here.jpg" alt="Tea equipment flat lay">
+    
+    <div class="equipment-grid">
+      <div class="equipment-item">
+        <!-- Add your kettle image here -->
+        <img class="equipment-item-image" src="kettle-image.jpg" alt="Kettle">
+        <h4>Kettle</h4>
+        <p>Any basic kettle works perfectly. Electric, stovetop, whatever you have. The water temperature matters more than the kettle itself.</p>
+      </div>
+      
+      <div class="equipment-item">
+        <!-- Add your mortar & pestle image here -->
+        <img class="equipment-item-image" src="mortar-pestle-image.jpg" alt="Mortar and Pestle">
+        <h4>Mortar & Pestle</h4>
+        <p>This is my secret weapon. Crushing whole spices like cardamom pods or cinnamon bark releases their essential oils, creating deeper, richer flavors than pre-ground spices ever could.</p>
+      </div>
+      
+      <div class="equipment-item">
+        <!-- Add your mug image here -->
+        <img class="equipment-item-image" src="mug-image.jpg" alt="Tea mug">
+        <h4>Mug</h4>
+        <p>That's it. Just a regular mug. Mine has a small chip on the handle from years of use, and it makes every cup taste like home.</p>
+      </div>
+    </div>
+    
+    <div class="process-section">
+      <h3>My Process</h3>
+      <ol>
+        <li>Heat water in the kettle</li>
+        <li>Crush any whole spices in the mortar & pestle</li>
+        <li>Add herbs directly to the mug</li>
+        <li>Pour hot water over everything</li>
+        <li>Let it steep</li>
+        <li>Drink with the herbs still in the cup</li>
+      </ol>
+      <p class="process-quote">"Some of my most memorable cups have been made with just hot water and whatever herbs I had on hand"</p>
+    </div>
+  </div>
+</section>
+<!-- ========================================= -->
+<!-- END PAGE 5: EQUIPMENT                    -->
+<!-- ========================================= -->
+
+<footer>
+  <p>Bhoomika Narayanan</p>
+</footer>
+
+</div>
+
+</body>
+</html>
